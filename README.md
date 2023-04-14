@@ -5,7 +5,7 @@ Some notes on how to get a GC9A01 round display working on Raspberry Pi 4B
 
 Using the waveshare example libraries in python and c, we got the SPI / spidev stuff to work following these instructions: https://www.waveshare.com/1.28inch-LCD-Module.htm 
 https://www.waveshare.com/wiki/1.28inch_LCD_Module
-Our version screen was not the exact waveshare one, one thing was the labeling of the pins were slightly different.
+Our version screen was not the exact waveshare one, one thing was the labeling of the pins were slightly different. We had a GINCHO version https://www.amazon.se/-/en/Equipment-240X240-Resolution-Interface-Adapter/dp/B0BFRFD5J2 
 
 This legend might help.
 
