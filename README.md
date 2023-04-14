@@ -25,22 +25,8 @@ Accidentally during that work, the small screen came alive showing the desktop (
 Attached is our /boot/config.txt and the xrandr config file. 
 
 ## 1: Add GC9A01 overlay to /boot/config.txt
-Add this to the end of the config file (I don't think the spi part is necessary, as it is overwritten by the latter gc9a01 overlay). Also, I'm not sure the HDMI stuff is ever applied. Framebuffer_depth=16 sets the color to be RGB656 which our screen runs off of. I believe the chip supports other color modes, so your screen could be setup different.
-
-[all]
-dtoverlay=spi-bcm2835-overlay
-enable_uart=1
-dtoverlay=gc9a01, width=240,height=240,fps=50
-
-hdmi_force_hotplug=1 
-hdmi_cvt=300 300 60 1 0 0 0 
-hdmi_group=2 
-hdmi_mode=1 
-hdmi_mode=87 
-display_rotate = 1 
-
-framebuffer_depth=16
-gpu_mem=256
+Add the end of the config.txt file of this repo (Starting with dtoverlay=spi-bcm2835-overlay) to the end of your /boot/config.txt file. 
+I don't think the spi part is necessary, as it is overwritten by the latter gc9a01 overlay, but it's there. Also, I'm not sure the HDMI stuff is ever applied either. Framebuffer_depth=16 sets the color to be RGB656 which our screen runs off of. I believe the chip supports other color modes, so your screen could be setup different.
 
 ## 2. Create xrandr config file
 Copy the 99-fbdev.conf file into /etc/X11/xorg.conf.d/ Reboot and it will start with desktop on the little one (only). Have ssh setup before you do this so you can reach in and delete it without having to work the terminal through a round 240X240 screen - that sucks. You can do it on the tiny screen, but yeah, it's tiny so make sure to know which folders you need to go to beforehand.
