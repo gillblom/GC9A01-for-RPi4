@@ -20,7 +20,7 @@ Since we have a multiscreen setup build with QtQuick, we wanted the screen to sh
 Now, I initially wanted a multihead boot (HDMI and the SPI screens both working on boot), but couldn't get it going. I tried following this:
 https://forums.raspberrypi.com/viewtopic.php?t=306624
 
-Accidentally during that work, the small screen came alive showing the desktop (the corner of it, anyway). The HDMI was not working. Since that is actually good for our purposes I didn't pursue a multihead xrandr config further, but should be doable.
+Accidentally during that work, the small screen came alive showing the desktop (the corner of it, anyway). The HDMI was not working. Since that is actually good for our purposes I didn't pursue a multihead(=dual screen) xrandr config further, but should be doable.
 
 Attached is our /boot/config.txt and the xrandr config file. 
 
